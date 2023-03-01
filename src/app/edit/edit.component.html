@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="jumbotron">
+    <form [formGroup]="vForm" (ngSubmit)="onSubmit()">
+      <div class="row right">
+        <button type="submit" [disabled]="vForm.invalid" class="btn right">Save</button>
+        <button type="button" routerLink="../../" class="btn right">Back</button>
+      </div>
+      <div class="form-group">
+        <label for="heading">Heading</label>
+        <input
+          type="text"
+          id="heading"
+          formControlName="heading"
+          class="form-control"
+        />
+      </div>
+      <div class="form-group">
+        <label for="content">Content</label>
+        <textarea
+          id="content"
+          rows="6"
+          formControlName="content"
+          class="form-control"
+        ></textarea>
+      </div>
+    </form>
+  </div>
+</div>

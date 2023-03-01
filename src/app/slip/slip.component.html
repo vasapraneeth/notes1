@@ -1,0 +1,20 @@
+<div class="container" *ngIf="(dataService.arr | json) !== 'null'; else flag">
+  <div *ngFor="let obj of dataService.arr | keyvalue" class="jumbotron">
+    <div class="right">
+      <button routerLink="/edit/{{ obj.key }}" class="btn">Edit</button>
+      <button class="btn" (click)="onDelete(obj.key)">Delete</button>
+    </div>
+    <h3>
+      <b>{{ obj.value["heading"] }}</b>
+    </h3>
+    <p>{{ obj.value["content"] }}</p>
+  </div>
+</div>
+
+<ng-template #flag>
+  <div class="container">
+    <div class="jumbotron">
+      <h2>Add some notes..!</h2>
+    </div>
+  </div>
+</ng-template>

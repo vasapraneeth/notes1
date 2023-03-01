@@ -1,0 +1,20 @@
+.right {
+  text-align: right;
+}
+
+.btn {
+  text-align: center;
+  margin-right: 5px;
+  border: solid rgb(153, 146, 146) 1px;
+  border-radius: 10px;
+  padding: 7px;
+}
+
+.btn:hover {
+  text-align: center;
+  border-radius: 10px;
+  margin-right: 5px;
+  padding: 7px;
+  color: rgb(255, 255, 255);
+  background-color: #5a5656;
+}
